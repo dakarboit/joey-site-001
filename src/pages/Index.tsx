@@ -1,6 +1,7 @@
 
 import { motion } from "framer-motion";
-import { Shield, Terminal, Network, Brain } from "lucide-react";
+import { Shield, Terminal, Network, Brain, Github, Linkedin, Phone } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Index = () => {
   return (
@@ -30,26 +31,94 @@ const Index = () => {
           >
             Joe Daniels Taomhera
           </motion.h1>
+
+          {/* Animated GIF Section */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex justify-center"
+          >
+            <img
+              src="https://user-images.githubusercontent.com/10498744/210012254-234538ff-d198-48aa-8964-37e6fd45d227.gif"
+              alt="Animated Banner"
+              className="max-w-full h-auto rounded-lg shadow-lg"
+            />
+          </motion.div>
+
+          {/* Mission Statement */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             className="text-xl text-neutral-300 max-w-2xl mx-auto"
           >
-            Specializing in SIEM/SOC Operations and Blockchain Security
+            I'm an Information Security Researcher with a passion for defensive security, SOC operations, and cyber resilience. Skilled in a wide range of cybersecurity tools and methodologies, I focus on hardening infrastructures and defending against modern cyber threats.
           </motion.p>
+
+          {/* Personal Motto */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="text-lg italic text-purple-300"
+          >
+            "My Faith, views, ways are mine"
+          </motion.p>
+
+          {/* Social Connections Tabs */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="pt-4 flex gap-4 justify-center"
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="pt-8"
           >
-            <button className="px-8 py-3 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-colors duration-300">
-              View Projects
-            </button>
-            <button className="px-8 py-3 border border-purple-500/50 text-purple-300 rounded-full hover:bg-purple-500/10 transition-colors duration-300">
-              Contact Me
-            </button>
+            <Tabs defaultValue="github" className="w-full max-w-md mx-auto">
+              <TabsList className="grid w-full grid-cols-3 bg-neutral-800/50">
+                <TabsTrigger value="github" className="data-[state=active]:bg-purple-500">
+                  <Github className="w-5 h-5 mr-2" />
+                  GitHub
+                </TabsTrigger>
+                <TabsTrigger value="linkedin" className="data-[state=active]:bg-purple-500">
+                  <Linkedin className="w-5 h-5 mr-2" />
+                  LinkedIn
+                </TabsTrigger>
+                <TabsTrigger value="whatsapp" className="data-[state=active]:bg-purple-500">
+                  <Phone className="w-5 h-5 mr-2" />
+                  WhatsApp
+                </TabsTrigger>
+              </TabsList>
+              <TabsContent value="github" className="mt-4">
+                <a
+                  href="https://github.com/dakarboit"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center p-4 bg-neutral-800/50 rounded-lg hover:bg-purple-500/20 transition-colors"
+                >
+                  Visit My GitHub Profile
+                </a>
+              </TabsContent>
+              <TabsContent value="linkedin" className="mt-4">
+                <a
+                  href="https://www.linkedin.com/in/joe-daniels-taomhera-4a1260342/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center p-4 bg-neutral-800/50 rounded-lg hover:bg-purple-500/20 transition-colors"
+                >
+                  Connect on LinkedIn
+                </a>
+              </TabsContent>
+              <TabsContent value="whatsapp" className="mt-4">
+                <a
+                  href="https://wa.me/YOUR_PHONE_NUMBER"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center p-4 bg-neutral-800/50 rounded-lg hover:bg-purple-500/20 transition-colors"
+                >
+                  Chat on WhatsApp
+                </a>
+              </TabsContent>
+            </Tabs>
           </motion.div>
         </div>
       </section>

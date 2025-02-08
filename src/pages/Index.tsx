@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Shield, Terminal, Network, Brain, Github, Linkedin, Phone, FolderGit } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -9,7 +10,7 @@ const Index = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden px-4">
         <div className="absolute inset-0 -z-10">
           <div 
-            className="absolute inset-0 bg-[url('https://cdn.dribbble.com/users/1059583/screenshots/4171367/media/5c8264a20b247115b68e6c2f4c97d5e6.gif')] bg-cover bg-center opacity-20"
+            className="absolute inset-0 bg-[url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXd4NWp1MzBwMnYyOXBvbjY5YmFyM3F6ZjJkOWl5MHBhbDdqcm95eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oKIPEqDGUULpEU0aQ/giphy.gif')] bg-cover bg-center opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/50 to-neutral-900" />
         </div>

@@ -1,71 +1,81 @@
 
 import { motion } from "framer-motion";
+import { Shield, Terminal, Network, Brain } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-neutral-50">
+    <div className="min-h-screen bg-neutral-900 text-white">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden px-4">
         <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-neutral-50/20" />
+          <div 
+            className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5')] bg-cover bg-center opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/50 to-neutral-900" />
         </div>
-        <div className="container max-w-4xl text-center space-y-6 fade-up">
+        <div className="container max-w-4xl text-center space-y-8 fade-up">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-block px-4 py-1.5 bg-neutral-100 text-neutral-600 rounded-full text-sm font-medium"
+            className="inline-block px-4 py-1.5 bg-purple-500/20 text-purple-300 rounded-full text-sm font-medium border border-purple-500/30"
           >
-            Introducing Innovation
+            Cybersecurity Specialist
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-5xl md:text-6xl font-bold text-neutral-900"
+            className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300"
           >
-            Create the Future
+            Joe Daniels Taomhera
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-xl text-neutral-600 max-w-2xl mx-auto"
+            className="text-xl text-neutral-300 max-w-2xl mx-auto"
           >
-            Experience technology that transforms the way you interact with the
-            world. Simple. Intuitive. Revolutionary.
+            Specializing in SIEM/SOC Operations and Blockchain Security
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="pt-4"
+            className="pt-4 flex gap-4 justify-center"
           >
-            <button className="px-8 py-3 bg-neutral-900 text-white rounded-full hover:bg-neutral-800 transition-colors duration-300">
-              Discover More
+            <button className="px-8 py-3 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-colors duration-300">
+              View Projects
+            </button>
+            <button className="px-8 py-3 border border-purple-500/50 text-purple-300 rounded-full hover:bg-purple-500/10 transition-colors duration-300">
+              Contact Me
             </button>
           </motion.div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-24 px-4">
+      {/* Expertise Section */}
+      <section className="py-24 px-4 bg-neutral-900/50">
         <div className="container max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold mb-4">Areas of Expertise</h2>
+            <p className="text-neutral-400">Defending digital frontiers with advanced security solutions</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {expertise.map((item, index) => (
               <motion.div
-                key={feature.title}
+                key={item.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="glass p-6 rounded-2xl hover-lift"
+                className="glass p-6 rounded-2xl hover-lift border border-purple-500/20 bg-neutral-800/50"
               >
-                <div className="w-12 h-12 bg-neutral-900 text-white rounded-xl flex items-center justify-center mb-4">
-                  {feature.icon}
+                <div className="w-12 h-12 bg-purple-500/20 text-purple-300 rounded-xl flex items-center justify-center mb-4">
+                  {item.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                <p className="text-neutral-600">{feature.description}</p>
+                <h3 className="text-xl font-semibold mb-2 text-purple-200">{item.title}</h3>
+                <p className="text-neutral-400">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -73,30 +83,28 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 border-t border-neutral-200">
+      <footer className="py-12 px-4 border-t border-neutral-800">
         <div className="container max-w-6xl">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-neutral-600 mb-4 md:mb-0">
-              © 2024 All rights reserved
+            <p className="text-neutral-500 mb-4 md:mb-0">
+              © 2024 Joe Daniels Taomhera
             </p>
             <div className="flex space-x-6">
               <a
-                href="#"
-                className="text-neutral-600 hover:text-neutral-900 transition-colors"
+                href="https://github.com/dakarboit"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-neutral-400 hover:text-purple-400 transition-colors"
               >
-                Terms
+                GitHub
               </a>
               <a
-                href="#"
-                className="text-neutral-600 hover:text-neutral-900 transition-colors"
+                href="https://www.linkedin.com/in/joe-daniels-taomhera-4a1260342/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-neutral-400 hover:text-purple-400 transition-colors"
               >
-                Privacy
-              </a>
-              <a
-                href="#"
-                className="text-neutral-600 hover:text-neutral-900 transition-colors"
-              >
-                Contact
+                LinkedIn
               </a>
             </div>
           </div>
@@ -106,69 +114,26 @@ const Index = () => {
   );
 };
 
-const features = [
+const expertise = [
   {
-    title: "Seamless Integration",
-    description:
-      "Connect and synchronize your digital experience across all devices with zero friction.",
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M13 10V3L4 14h7v7l9-11h-7z"
-        />
-      </svg>
-    ),
+    title: "SIEM/SOC Operations",
+    description: "Expert in Security Information and Event Management, monitoring and responding to security threats in real-time.",
+    icon: <Shield className="w-6 h-6" />,
   },
   {
-    title: "Intelligent Design",
-    description:
-      "Experience thoughtfully crafted interfaces that anticipate your needs and enhance productivity.",
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-        />
-      </svg>
-    ),
+    title: "Blockchain Security",
+    description: "Specialized in securing blockchain infrastructure and smart contract auditing.",
+    icon: <Network className="w-6 h-6" />,
   },
   {
-    title: "Advanced Security",
-    description:
-      "Rest assured with state-of-the-art security measures protecting your data at every step.",
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-        />
-      </svg>
-    ),
+    title: "Threat Detection",
+    description: "Advanced threat detection and incident response capabilities.",
+    icon: <Terminal className="w-6 h-6" />,
+  },
+  {
+    title: "Security Strategy",
+    description: "Developing comprehensive security strategies and frameworks.",
+    icon: <Brain className="w-6 h-6" />,
   },
 ];
 

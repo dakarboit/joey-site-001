@@ -1,6 +1,5 @@
-
 import { motion } from "framer-motion";
-import { Shield, Terminal, Network, Brain, Github, Linkedin, Phone } from "lucide-react";
+import { Shield, Terminal, Network, Brain, Github, Linkedin, Phone, FolderGit } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Index = () => {
@@ -10,7 +9,7 @@ const Index = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden px-4">
         <div className="absolute inset-0 -z-10">
           <div 
-            className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5')] bg-cover bg-center opacity-20"
+            className="absolute inset-0 bg-[url('https://cdn.dribbble.com/users/1059583/screenshots/4171367/media/5c8264a20b247115b68e6c2f4c97d5e6.gif')] bg-cover bg-center opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/50 to-neutral-900" />
         </div>
@@ -31,20 +30,6 @@ const Index = () => {
           >
             Joe Daniels Taomhera
           </motion.h1>
-
-          {/* Animated GIF Section */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex justify-center"
-          >
-            <img
-              src="https://user-images.githubusercontent.com/10498744/210012254-234538ff-d198-48aa-8964-37e6fd45d227.gif"
-              alt="Animated Banner"
-              className="max-w-full h-auto rounded-lg shadow-lg"
-            />
-          </motion.div>
 
           {/* Mission Statement */}
           <motion.p
@@ -74,7 +59,7 @@ const Index = () => {
             className="pt-8"
           >
             <Tabs defaultValue="github" className="w-full max-w-md mx-auto">
-              <TabsList className="grid w-full grid-cols-3 bg-neutral-800/50">
+              <TabsList className="grid w-full grid-cols-4 bg-neutral-800/50">
                 <TabsTrigger value="github" className="data-[state=active]:bg-purple-500">
                   <Github className="w-5 h-5 mr-2" />
                   GitHub
@@ -86,6 +71,10 @@ const Index = () => {
                 <TabsTrigger value="whatsapp" className="data-[state=active]:bg-purple-500">
                   <Phone className="w-5 h-5 mr-2" />
                   WhatsApp
+                </TabsTrigger>
+                <TabsTrigger value="projects" className="data-[state=active]:bg-purple-500">
+                  <FolderGit className="w-5 h-5 mr-2" />
+                  Projects
                 </TabsTrigger>
               </TabsList>
               <TabsContent value="github" className="mt-4">
@@ -110,13 +99,18 @@ const Index = () => {
               </TabsContent>
               <TabsContent value="whatsapp" className="mt-4">
                 <a
-                  href="https://wa.me/YOUR_PHONE_NUMBER"
+                  href="https://wa.me/27678280287"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center p-4 bg-neutral-800/50 rounded-lg hover:bg-purple-500/20 transition-colors"
                 >
                   Chat on WhatsApp
                 </a>
+              </TabsContent>
+              <TabsContent value="projects" className="mt-4">
+                <div className="p-4 bg-neutral-800/50 rounded-lg text-center">
+                  <p className="text-neutral-300">Projects section coming soon...</p>
+                </div>
               </TabsContent>
             </Tabs>
           </motion.div>

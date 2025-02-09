@@ -3,6 +3,30 @@ import { motion } from "framer-motion";
 import { Shield, Terminal, Network, Brain, Github, Linkedin, Phone, FolderGit } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
+// Define expertise array before the component
+const expertise = [
+  {
+    title: "SIEM/SOC Operations",
+    description: "Expert in Security Information and Event Management, monitoring and responding to security threats in real-time.",
+    icon: <Shield className="w-6 h-6" />,
+  },
+  {
+    title: "Blockchain Security",
+    description: "Specialized in securing blockchain infrastructure and smart contract auditing.",
+    icon: <Network className="w-6 h-6" />,
+  },
+  {
+    title: "Threat Detection",
+    description: "Advanced threat detection and incident response capabilities.",
+    icon: <Terminal className="w-6 h-6" />,
+  },
+  {
+    title: "Security Strategy",
+    description: "Developing comprehensive security strategies and frameworks.",
+    icon: <Brain className="w-6 h-6" />,
+  },
+];
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-neutral-900 text-white">
@@ -177,28 +201,5 @@ const Index = () => {
     </div>
   );
 };
-
-const expertise = [
-  {
-    title: "SIEM/SOC Operations",
-    description: "Expert in Security Information and Event Management, monitoring and responding to security threats in real-time.",
-    icon: <Shield className="w-6 h-6" />,
-  },
-  {
-    title: "Blockchain Security",
-    description: "Specialized in securing blockchain infrastructure and smart contract auditing.",
-    icon: <Network className="w-6 h-6" />,
-  },
-  {
-    title: "Threat Detection",
-    description: "Advanced threat detection and incident response capabilities.",
-    icon: <Terminal className="w-6 h-6" />,
-  },
-  {
-    title: "Security Strategy",
-    description: "Developing comprehensive security strategies and frameworks.",
-    icon: <Brain className="w-6 h-6" />,
-  },
-];
 
 export default Index;

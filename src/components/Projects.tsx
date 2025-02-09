@@ -24,7 +24,7 @@ const Projects = () => {
           </div>
           <div className="flex space-x-4">
             <a
-              href="https://github.com/dakarboit/phishing-attack-simulator"
+              href="https://inspiring-llama-fdbf13.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-4 py-2 bg-purple-500/20 text-purple-300 rounded-lg hover:bg-purple-500/30 transition-colors"
@@ -33,7 +33,7 @@ const Projects = () => {
               View Project
             </a>
             <a
-              href="https://github.com/dakarboit/phishing-attack-simulator"
+              href="https://github.com/dakarboit/phishing-simulator-atk"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-4 py-2 bg-neutral-700/50 text-neutral-300 rounded-lg hover:bg-neutral-700/70 transition-colors"

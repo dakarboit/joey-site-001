@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Shield, Terminal, Network, Brain, Github, Linkedin, Phone, FolderGit } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -133,8 +132,44 @@ const Index = () => {
                 </a>
               </TabsContent>
               <TabsContent value="projects" className="mt-4">
-                <div className="p-4 bg-neutral-800/50 rounded-lg text-center">
-                  <p className="text-neutral-300">Projects section coming soon...</p>
+                <div className="p-6 bg-neutral-800/50 rounded-lg">
+                  <div className="space-y-6">
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5 }}
+                      className="border border-purple-500/20 rounded-lg p-6 bg-neutral-800/30 hover:bg-neutral-800/50 transition-all"
+                    >
+                      <h3 className="text-xl font-semibold text-purple-300 mb-3">Phishing Attack Simulator</h3>
+                      <p className="text-neutral-300 mb-4">
+                        A comprehensive platform for simulating phishing attacks to test and improve organizational security awareness. Features include customizable email templates, response tracking, and detailed analytics.
+                      </p>
+                      <div className="flex flex-wrap gap-3 mb-4">
+                        <span className="px-3 py-1 text-sm bg-purple-500/20 text-purple-300 rounded-full">React</span>
+                        <span className="px-3 py-1 text-sm bg-purple-500/20 text-purple-300 rounded-full">TypeScript</span>
+                        <span className="px-3 py-1 text-sm bg-purple-500/20 text-purple-300 rounded-full">Tailwind CSS</span>
+                        <span className="px-3 py-1 text-sm bg-purple-500/20 text-purple-300 rounded-full">Security</span>
+                      </div>
+                      <div className="flex space-x-4">
+                        <a
+                          href="#"
+                          className="inline-flex items-center px-4 py-2 bg-purple-500/20 text-purple-300 rounded-lg hover:bg-purple-500/30 transition-colors"
+                        >
+                          <FolderGit className="w-4 h-4 mr-2" />
+                          View Project
+                        </a>
+                        <a
+                          href="https://github.com/dakarboit"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center px-4 py-2 bg-neutral-700/50 text-neutral-300 rounded-lg hover:bg-neutral-700/70 transition-colors"
+                        >
+                          <Github className="w-4 h-4 mr-2" />
+                          Source Code
+                        </a>
+                      </div>
+                    </motion.div>
+                  </div>
                 </div>
               </TabsContent>
             </Tabs>

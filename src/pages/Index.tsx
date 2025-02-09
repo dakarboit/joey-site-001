@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Shield, Terminal, Network, Brain, Github, Linkedin, Phone, FolderGit } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-// Define expertise array before the component
 const expertise = [
   {
     title: "SIEM/SOC Operations",
@@ -29,7 +28,6 @@ const expertise = [
 const Index = () => {
   return (
     <div className="min-h-screen bg-neutral-900 text-white">
-      {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden px-4">
         <div className="absolute inset-0 -z-10">
           <div 
@@ -55,7 +53,6 @@ const Index = () => {
             Joe Daniels Taomhera
           </motion.h1>
 
-          {/* Mission Statement */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -65,7 +62,6 @@ const Index = () => {
             I'm an Information Security Researcher with a passion for defensive security, SOC operations, and cyber resilience. Skilled in a wide range of cybersecurity tools and methodologies, I focus on hardening infrastructures and defending against modern cyber threats.
           </motion.p>
 
-          {/* Personal Motto */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -75,7 +71,6 @@ const Index = () => {
             "My Faith, views, ways are mine"
           </motion.p>
 
-          {/* Social Connections Tabs */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -152,14 +147,16 @@ const Index = () => {
                       </div>
                       <div className="flex space-x-4">
                         <a
-                          href="#"
+                          href="https://github.com/dakarboit/phishing-attack-simulator"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="inline-flex items-center px-4 py-2 bg-purple-500/20 text-purple-300 rounded-lg hover:bg-purple-500/30 transition-colors"
                         >
                           <FolderGit className="w-4 h-4 mr-2" />
                           View Project
                         </a>
                         <a
-                          href="https://github.com/dakarboit"
+                          href="https://github.com/dakarboit/phishing-attack-simulator"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center px-4 py-2 bg-neutral-700/50 text-neutral-300 rounded-lg hover:bg-neutral-700/70 transition-colors"
@@ -188,14 +185,16 @@ const Index = () => {
                       </div>
                       <div className="flex space-x-4">
                         <a
-                          href="#"
+                          href="https://github.com/dakarboit/incident-response-framework"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="inline-flex items-center px-4 py-2 bg-purple-500/20 text-purple-300 rounded-lg hover:bg-purple-500/30 transition-colors"
                         >
                           <FolderGit className="w-4 h-4 mr-2" />
                           View Project
                         </a>
                         <a
-                          href="https://github.com/dakarboit"
+                          href="https://github.com/dakarboit/incident-response-framework"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center px-4 py-2 bg-neutral-700/50 text-neutral-300 rounded-lg hover:bg-neutral-700/70 transition-colors"
@@ -213,7 +212,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Expertise Section */}
       <section className="py-24 px-4 bg-neutral-900/50">
         <div className="container max-w-6xl">
           <div className="text-center mb-16">
@@ -241,7 +239,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="py-12 px-4 border-t border-neutral-800">
         <div className="container max-w-6xl">
           <div className="flex flex-col md:flex-row justify-between items-center">

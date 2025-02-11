@@ -1,6 +1,9 @@
 
 import { motion } from "framer-motion";
-import { FolderGit, Github } from "lucide-react";
+import { FolderGit, Github, ShieldAlert, ShieldCheck, UserX, Mail } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Progress } from "@/components/ui/progress";
+import { Separator } from "@/components/ui/separator";
 
 const Projects = () => {
   return (
@@ -12,16 +15,85 @@ const Projects = () => {
           transition={{ duration: 0.5 }}
           className="border border-purple-500/20 rounded-lg p-6 bg-neutral-800/30 hover:bg-neutral-800/50 transition-all"
         >
-          <h3 className="text-xl font-semibold text-purple-300 mb-3">Phishing Attack Simulator</h3>
+          <h3 className="text-xl font-semibold text-purple-300 mb-3 flex items-center gap-2">
+            <ShieldAlert className="w-6 h-6 text-red-400" />
+            Phishing Attack Simulator
+          </h3>
+          
+          {/* Active Threat Simulation */}
+          <Card className="bg-neutral-800/50 border-red-500/20 mb-4">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-sm text-red-400">Active Phishing Attempt Detected</CardTitle>
+              <CardDescription className="text-neutral-400">
+                Malicious email campaign targeting finance department
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-neutral-300">Attack Progress</span>
+                  <span className="text-sm text-red-400">75%</span>
+                </div>
+                <Progress value={75} className="h-2 bg-neutral-700" indicatorClassName="bg-red-500" />
+                
+                {/* Attack Details */}
+                <div className="grid grid-cols-2 gap-4 mt-4">
+                  <div className="flex items-center gap-2">
+                    <Mail className="w-4 h-4 text-purple-400" />
+                    <span className="text-sm text-neutral-300">23 Emails Sent</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <UserX className="w-4 h-4 text-red-400" />
+                    <span className="text-sm text-neutral-300">5 Clicked Links</span>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Mitigation Steps */}
+          <div className="space-y-3 mb-4">
+            <h4 className="text-sm font-semibold text-purple-300 flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4" />
+              Mitigation Steps
+            </h4>
+            <div className="space-y-2">
+              {[
+                { step: "Block Sender Domains", status: "Completed", progress: 100 },
+                { step: "Alert Security Team", status: "In Progress", progress: 80 },
+                { step: "User Training Initiated", status: "In Progress", progress: 45 },
+                { step: "Update Email Filters", status: "Pending", progress: 20 },
+              ].map((step, index) => (
+                <div key={index} className="bg-neutral-700/30 p-3 rounded-lg">
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-sm text-neutral-300">{step.step}</span>
+                    <span className={`text-xs px-2 py-1 rounded-full ${
+                      step.status === "Completed" ? "bg-green-500/20 text-green-300" :
+                      step.status === "In Progress" ? "bg-yellow-500/20 text-yellow-300" :
+                      "bg-neutral-500/20 text-neutral-300"
+                    }`}>
+                      {step.status}
+                    </span>
+                  </div>
+                  <Progress value={step.progress} className="h-1.5 bg-neutral-700" />
+                </div>
+              ))}
+            </div>
+          </div>
+
           <p className="text-neutral-300 mb-4">
             A comprehensive platform for simulating phishing attacks to test and improve organizational security awareness. Features include customizable email templates, response tracking, and detailed analytics.
           </p>
+
           <div className="flex flex-wrap gap-3 mb-4">
             <span className="px-3 py-1 text-sm bg-purple-500/20 text-purple-300 rounded-full">React</span>
             <span className="px-3 py-1 text-sm bg-purple-500/20 text-purple-300 rounded-full">TypeScript</span>
             <span className="px-3 py-1 text-sm bg-purple-500/20 text-purple-300 rounded-full">Tailwind CSS</span>
             <span className="px-3 py-1 text-sm bg-purple-500/20 text-purple-300 rounded-full">Security</span>
           </div>
+
+          <Separator className="my-4 bg-purple-500/20" />
+          
           <div className="flex space-x-4">
             <a
               href="https://inspiring-llama-fdbf13.netlify.app/"

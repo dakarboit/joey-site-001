@@ -4,7 +4,7 @@ import { FolderGit, Github } from "lucide-react";
 
 const Projects = () => {
   return (
-    <div className="p-6 bg-neutral-800/50 rounded-lg max-h-[500px] overflow-y-auto">
+    <div className="p-6 bg-neutral-800/50 rounded-lg max-h-[500px] overflow-y-auto scrollbar-thin">
       <div className="space-y-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

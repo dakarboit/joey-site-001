@@ -71,7 +71,7 @@ const Projects = () => {
               View Project
             </a>
             <a
-              href="https://github.com/dakarboit/incident-response-framework"
+              href="https://github.com/dakarboit/incident-response-framework/tree/main"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-4 py-2 bg-neutral-700/50 text-neutral-300 rounded-lg hover:bg-neutral-700/70 transition-colors"

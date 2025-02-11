@@ -62,7 +62,7 @@ const Projects = () => {
           </div>
           <div className="flex space-x-4">
             <a
-              href="https://github.com/dakarboit/incident-response-framework"
+              href ="https://lively-griffin-01f13a.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-4 py-2 bg-purple-500/20 text-purple-300 rounded-lg hover:bg-purple-500/30 transition-colors"

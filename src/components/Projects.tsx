@@ -5,7 +5,7 @@ import { FolderGit, Github } from "lucide-react";
 const Projects = () => {
   return (
     <div className="p-6 bg-neutral-800/50 rounded-lg">
-      <div className="space-y-6 h-3/4">
+      <div className="space-y-6 h-3/4 bg-red-300">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

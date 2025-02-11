@@ -34,7 +34,7 @@ const Projects = () => {
                   <span className="text-sm text-neutral-300">Attack Progress</span>
                   <span className="text-sm text-red-400">75%</span>
                 </div>
-                <Progress value={75} className="h-2 bg-neutral-700" indicatorClassName="bg-red-500" />
+                <Progress value={75} className="h-2 bg-neutral-700" />
                 
                 {/* Attack Details */}
                 <div className="grid grid-cols-2 gap-4 mt-4">
@@ -75,7 +75,10 @@ const Projects = () => {
                       {step.status}
                     </span>
                   </div>
-                  <Progress value={step.progress} className="h-1.5 bg-neutral-700" />
+                  <Progress 
+                    value={step.progress} 
+                    className="h-1.5 bg-neutral-700" 
+                  />
                 </div>
               ))}
             </div>

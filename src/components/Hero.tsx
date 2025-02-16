@@ -46,7 +46,7 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-lg italic text-purple-300"
         >
-          "My Faith, views, ways are mine"
+          "To be yourself in a world that is constantly trying to make you something else, is the greatest accomplishment" - Ralph Waldo Emerson
         </motion.p>
 
         <motion.div

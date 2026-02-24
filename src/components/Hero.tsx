@@ -6,10 +6,12 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4">
       <div className="absolute inset-0 -z-10">
-        <div
-          className="absolute inset-0 bg-[url('/images/soc-background.jpg')] bg-cover bg-center"
+        <img
+          src="/images/soc-background.jpg"
+          alt="SOC Operations Center"
+          className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/80 via-neutral-900/90 to-neutral-900" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220,40%,6%)]/70 via-[hsl(220,40%,6%)]/85 to-[hsl(220,25%,8%)]" />
       </div>
 
       <div className="container max-w-5xl text-center space-y-8 py-24">
@@ -17,7 +19,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-block px-4 py-1.5 bg-purple-500/20 text-purple-300 rounded-full text-sm font-medium border border-purple-500/30"
+          className="inline-block px-4 py-1.5 bg-cyan-500/20 text-cyan-300 rounded-full text-sm font-medium border border-cyan-500/30"
         >
           SOC Engineer / Analyst • Penetration Tester • Cloud Security Engineer
         </motion.span>
@@ -26,7 +28,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-purple-300 to-cyan-300"
+          className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-300 to-cyan-200"
         >
           Joseph Daniel Taomhera
         </motion.h1>
@@ -44,7 +46,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-lg italic text-purple-300/80"
+          className="text-lg italic text-cyan-300/80"
         >
           "To be yourself in a world that is constantly trying to make you something else, is the greatest accomplishment" — Ralph Waldo Emerson
         </motion.p>
@@ -59,7 +61,7 @@ const Hero = () => {
             href="https://github.com/dakarboit"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-purple-500/20 text-purple-300 rounded-lg hover:bg-purple-500/30 transition-colors border border-purple-500/20"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-cyan-500/20 text-cyan-300 rounded-lg hover:bg-cyan-500/30 transition-colors border border-cyan-500/20"
           >
             <Github className="w-4 h-4" /> GitHub
           </a>
@@ -67,7 +69,7 @@ const Hero = () => {
             href="https://www.linkedin.com/in/joe-daniels-taomhera-4a1260342/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-purple-500/20 text-purple-300 rounded-lg hover:bg-purple-500/30 transition-colors border border-purple-500/20"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-cyan-500/20 text-cyan-300 rounded-lg hover:bg-cyan-500/30 transition-colors border border-cyan-500/20"
           >
             <Linkedin className="w-4 h-4" /> LinkedIn
           </a>
@@ -75,13 +77,13 @@ const Hero = () => {
             href="https://wa.me/27678280287"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-purple-500/20 text-purple-300 rounded-lg hover:bg-purple-500/30 transition-colors border border-purple-500/20"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-cyan-500/20 text-cyan-300 rounded-lg hover:bg-cyan-500/30 transition-colors border border-cyan-500/20"
           >
             <Phone className="w-4 h-4" /> WhatsApp
           </a>
           <a
             href="mailto:josepht.daniels@outlook.com"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-neutral-700/50 text-neutral-300 rounded-lg hover:bg-neutral-700/70 transition-colors border border-neutral-600/30"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-900/40 text-blue-200 rounded-lg hover:bg-blue-900/60 transition-colors border border-blue-700/30"
           >
             <Mail className="w-4 h-4" /> Email
           </a>

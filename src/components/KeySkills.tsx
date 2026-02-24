@@ -37,14 +37,14 @@ const skills = [
 
 const KeySkills = () => {
   return (
-    <section className="py-24 px-4 bg-neutral-900">
+    <section className="py-24 px-4 bg-[hsl(220,25%,8%)]">
       <div className="container max-w-6xl">
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold mb-4 text-purple-200"
+            className="text-3xl md:text-4xl font-bold mb-4 text-cyan-200"
           >
             Key Skills & Expertise
           </motion.h2>
@@ -67,18 +67,18 @@ const KeySkills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.08 }}
               viewport={{ once: true }}
-              className="p-6 rounded-2xl border border-purple-500/15 bg-neutral-800/40 hover:bg-neutral-800/60 transition-all group"
+              className="p-6 rounded-2xl border border-cyan-500/15 bg-[hsl(220,30%,12%)]/60 hover:bg-[hsl(220,30%,14%)]/80 transition-all group"
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-purple-500/20 text-purple-300 rounded-xl flex items-center justify-center group-hover:bg-purple-500/30 transition-colors">
+                <div className="w-10 h-10 bg-cyan-500/20 text-cyan-300 rounded-xl flex items-center justify-center group-hover:bg-cyan-500/30 transition-colors">
                   {skill.icon}
                 </div>
-                <h3 className="font-semibold text-purple-200 text-sm">{skill.category}</h3>
+                <h3 className="font-semibold text-cyan-200 text-sm">{skill.category}</h3>
               </div>
               <ul className="space-y-2">
                 {skill.items.map((item) => (
                   <li key={item} className="text-sm text-neutral-400 flex items-start gap-2">
-                    <span className="text-purple-500 mt-1.5 w-1 h-1 rounded-full bg-purple-400 shrink-0" />
+                    <span className="mt-1.5 w-1 h-1 rounded-full bg-cyan-400 shrink-0" />
                     {item}
                   </li>
                 ))}
